@@ -1,7 +1,7 @@
 {
   "projects": [
     {
-      "id": "project1",
+      "id": "Audience Analytics",
       "title": "Project Name 1",
       "description": "A sophisticated image classification system that utilizes state-of-the-art deep learning techniques to accurately identify objects in real-time.",
       "image": "images/project1.jpg",
