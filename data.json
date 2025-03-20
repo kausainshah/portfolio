@@ -1,0 +1,40 @@
+{
+  "projects": [
+    {
+      "id": "project1",
+      "title": "Project Name 1",
+      "description": "A sophisticated image classification system that utilizes state-of-the-art deep learning techniques to accurately identify objects in real-time.",
+      "image": "images/project1.jpg",
+      "tags": ["Computer Vision", "PyTorch", "CNN"],
+      "links": {
+        "github": "https://github.com/yourusername/project1",
+        "demo": "https://demo-link.com/project1",
+        "paper": "https://paper-link.com/project1"
+      }
+    },
+    {
+      "id": "project2",
+      "title": "Project Name 2",
+      "description": "An advanced natural language processing system that can understand and generate human-like text for customer service applications.",
+      "image": "images/project2.jpg",
+      "tags": ["NLP", "Transformers", "BERT"],
+      "links": {
+        "github": "https://github.com/yourusername/project2",
+        "demo": "https://demo-link.com/project2",
+        "blog": "https://blog-link.com/project2"
+      }
+    },
+    {
+      "id": "project3",
+      "title": "Project Name 3",
+      "description": "A reinforcement learning framework that trains autonomous agents to perform complex tasks in simulated environments with minimal human intervention.",
+      "image": "images/project3.jpg",
+      "tags": ["Reinforcement Learning", "TensorFlow", "Unity ML"],
+      "links": {
+        "github": "https://github.com/yourusername/project3",
+        "demo": "https://demo-link.com/project3",
+        "documentation": "https://docs-link.com/project3"
+      }
+    }
+  ]
+}
