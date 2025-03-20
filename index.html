@@ -1,1 +1,873 @@
-## This is my Website
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Your Name - AI/ML Portfolio</title>
+    <style>
+        :root {
+            --primary-color: #1e3a8a;
+            --secondary-color: #3b82f6;
+            --light-color: #f3f4f6;
+            --dark-color: #1f2937;
+            --border-color: #e5e7eb;
+            --hover-color: #dbeafe;
+        }
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+        }
+        
+        body {
+            background-color: var(--light-color);
+            color: var(--dark-color);
+            line-height: 1.6;
+        }
+        
+        a {
+            text-decoration: none;
+            color: var(--primary-color);
+            transition: color 0.3s;
+        }
+        
+        a:hover {
+            color: var(--secondary-color);
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+        
+        header {
+            background-color: white;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+        
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 1.5rem 0;
+        }
+        
+        .logo {
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: var(--primary-color);
+        }
+        
+        .nav-links {
+            display: flex;
+            gap: 2rem;
+        }
+        
+        .nav-links a {
+            font-weight: 500;
+        }
+        
+        .hero {
+            padding: 5rem 0;
+            display: flex;
+            align-items: center;
+            gap: 3rem;
+            background-color: white;
+        }
+        
+        .hero-content {
+            flex: 1;
+        }
+        
+        .hero-image {
+            flex: 1;
+            display: flex;
+            justify-content: center;
+        }
+        
+        .hero-image img {
+            max-width: 100%;
+            border-radius: 10px;
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+        }
+        
+        h1 {
+            font-size: 3rem;
+            margin-bottom: 1rem;
+            color: var(--primary-color);
+        }
+        
+        h2 {
+            font-size: 2rem;
+            margin-bottom: 1rem;
+            color: var(--primary-color);
+        }
+        
+        h3 {
+            font-size: 1.5rem;
+            margin-bottom: 0.75rem;
+            color: var(--primary-color);
+        }
+        
+        .highlight {
+            color: var(--secondary-color);
+        }
+        
+        .hero p {
+            font-size: 1.25rem;
+            margin-bottom: 2rem;
+            color: var(--dark-color);
+        }
+        
+        .btn {
+            display: inline-block;
+            background-color: var(--primary-color);
+            color: white;
+            padding: 0.75rem 1.5rem;
+            border-radius: 5px;
+            font-weight: 500;
+            transition: background-color 0.3s;
+        }
+        
+        .btn:hover {
+            background-color: var(--secondary-color);
+            color: white;
+        }
+        
+        .btn-outline {
+            background-color: transparent;
+            border: 2px solid var(--primary-color);
+            color: var(--primary-color);
+            margin-left: 1rem;
+        }
+        
+        .btn-outline:hover {
+            background-color: var(--primary-color);
+            color: white;
+        }
+        
+        section {
+            padding: 5rem 0;
+        }
+        
+        .section-header {
+            text-align: center;
+            margin-bottom: 3rem;
+        }
+        
+        .about {
+            background-color: white;
+        }
+        
+        .about-content {
+            display: flex;
+            gap: 3rem;
+            align-items: center;
+        }
+        
+        .about-text {
+            flex: 2;
+        }
+        
+        .about-image {
+            flex: 1;
+        }
+        
+        .about-image img {
+            max-width: 100%;
+            border-radius: 10px;
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+        }
+        
+        .skills {
+            background-color: var(--light-color);
+        }
+        
+        .skill-categories {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 2rem;
+            justify-content: center;
+        }
+        
+        .skill-category {
+            background-color: white;
+            border-radius: 10px;
+            padding: 2rem;
+            flex: 1;
+            min-width: 300px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+            transition: transform 0.3s;
+        }
+        
+        .skill-category:hover {
+            transform: translateY(-5px);
+        }
+        
+        .skill-category h3 {
+            text-align: center;
+            margin-bottom: 1.5rem;
+        }
+        
+        .skill-list {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.75rem;
+        }
+        
+        .skill-tag {
+            background-color: var(--light-color);
+            padding: 0.5rem 1rem;
+            border-radius: 5px;
+            font-size: 0.9rem;
+            font-weight: 500;
+            box-shadow: 0 1px 2px rgba(0, 0, 0, 0.05);
+        }
+        
+        .projects {
+            background-color: white;
+        }
+        
+        .project-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+            gap: 2rem;
+        }
+        
+        .project-card {
+            background-color: white;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+            transition: transform 0.3s;
+            border: 1px solid var(--border-color);
+        }
+        
+        .project-card:hover {
+            transform: translateY(-5px);
+        }
+        
+        .project-image {
+            width: 100%;
+            height: 200px;
+            background-color: var(--light-color);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            overflow: hidden;
+        }
+        
+        .project-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+        
+        .project-content {
+            padding: 1.5rem;
+        }
+        
+        .project-content h3 {
+            margin-bottom: 0.5rem;
+        }
+        
+        .project-tags {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.5rem;
+            margin: 1rem 0;
+        }
+        
+        .project-tag {
+            background-color: var(--light-color);
+            padding: 0.25rem 0.75rem;
+            border-radius: 15px;
+            font-size: 0.8rem;
+        }
+        
+        .project-links {
+            margin-top: 1rem;
+            display: flex;
+            gap: 1rem;
+        }
+        
+        .project-links a {
+            font-size: 0.9rem;
+            font-weight: 500;
+            display: flex;
+            align-items: center;
+            gap: 0.25rem;
+        }
+        
+        .experience {
+            background-color: var(--light-color);
+        }
+        
+        .timeline {
+            position: relative;
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 2rem 0;
+        }
+        
+        .timeline::before {
+            content: '';
+            position: absolute;
+            width: 2px;
+            background-color: var(--border-color);
+            top: 0;
+            bottom: 0;
+            left: 50%;
+            margin-left: -1px;
+        }
+        
+        .timeline-item {
+            position: relative;
+            width: 50%;
+            padding: 2rem;
+            background: white;
+            border-radius: 10px;
+            margin-bottom: 2rem;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+        }
+        
+        .timeline-item::before {
+            content: '';
+            position: absolute;
+            width: 20px;
+            height: 20px;
+            border-radius: 50%;
+            background: var(--primary-color);
+            top: 2rem;
+        }
+        
+        .timeline-item:nth-child(odd) {
+            left: 0;
+            padding-right: 3rem;
+        }
+        
+        .timeline-item:nth-child(odd)::before {
+            right: -10px;
+        }
+        
+        .timeline-item:nth-child(even) {
+            left: 50%;
+            padding-left: 3rem;
+        }
+        
+        .timeline-item:nth-child(even)::before {
+            left: -10px;
+        }
+        
+        .timeline-date {
+            font-weight: 600;
+            color: var(--secondary-color);
+            margin-bottom: 0.5rem;
+        }
+        
+        .publications {
+            background-color: white;
+        }
+        
+        .publication-list {
+            display: flex;
+            flex-direction: column;
+            gap: 2rem;
+        }
+        
+        .publication-card {
+            background-color: var(--light-color);
+            border-radius: 10px;
+            padding: 2rem;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+        }
+        
+        .publication-title {
+            font-size: 1.25rem;
+            font-weight: 600;
+            margin-bottom: 0.5rem;
+        }
+        
+        .publication-authors {
+            font-style: italic;
+            margin-bottom: 1rem;
+            color: #4b5563;
+        }
+        
+        .publication-venue {
+            font-weight: 500;
+            margin-bottom: 1rem;
+        }
+        
+        .publication-links {
+            display: flex;
+            gap: 1rem;
+        }
+        
+        .contact {
+            background-color: var(--light-color);
+        }
+        
+        .contact-content {
+            display: flex;
+            gap: 3rem;
+            align-items: center;
+        }
+        
+        .contact-info {
+            flex: 1;
+        }
+        
+        .contact-info p {
+            margin-bottom: 1.5rem;
+        }
+        
+        .contact-links {
+            display: flex;
+            gap: 1.5rem;
+            margin-top: 2rem;
+        }
+        
+        .contact-links a {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            font-weight: 500;
+        }
+        
+        .contact-form {
+            flex: 1;
+            background-color: white;
+            padding: 2rem;
+            border-radius: 10px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+        }
+        
+        .form-group {
+            margin-bottom: 1.5rem;
+        }
+        
+        .form-group label {
+            display: block;
+            margin-bottom: 0.5rem;
+            font-weight: 500;
+        }
+        
+        .form-group input, 
+        .form-group textarea {
+            width: 100%;
+            padding: 0.75rem;
+            border: 1px solid var(--border-color);
+            border-radius: 5px;
+            font-size: 1rem;
+        }
+        
+        .form-group textarea {
+            min-height: 150px;
+            resize: vertical;
+        }
+        
+        footer {
+            background-color: var(--dark-color);
+            color: white;
+            padding: 3rem 0;
+            text-align: center;
+        }
+        
+        .footer-content {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+        
+        .footer-links {
+            display: flex;
+            justify-content: center;
+            gap: 2rem;
+            margin: 2rem 0;
+        }
+        
+        .footer-links a {
+            color: white;
+            transition: color 0.3s;
+        }
+        
+        .footer-links a:hover {
+            color: var(--secondary-color);
+        }
+        
+        .copyright {
+            margin-top: 2rem;
+            font-size: 0.9rem;
+            color: #9ca3af;
+        }
+        
+        @media (max-width: 992px) {
+            .hero, .about-content, .contact-content {
+                flex-direction: column;
+            }
+            
+            .timeline::before {
+                left: 31px;
+            }
+            
+            .timeline-item {
+                width: 100%;
+                left: 0 !important;
+                padding-left: 70px !important;
+                padding-right: 2rem !important;
+            }
+            
+            .timeline-item::before {
+                left: 20px !important;
+                right: auto !important;
+            }
+        }
+        
+        @media (max-width: 768px) {
+            nav {
+                flex-direction: column;
+                gap: 1rem;
+            }
+            
+            .project-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <nav>
+                <div class="logo">Your Name</div>
+                <div class="nav-links">
+                    <a href="#about">About</a>
+                    <a href="#skills">Skills</a>
+                    <a href="#projects">Projects</a>
+                    <a href="#experience">Experience</a>
+                    <a href="#publications">Publications</a>
+                    <a href="#contact">Contact</a>
+                </div>
+            </nav>
+        </div>
+    </header>
+    
+    <section class="hero">
+        <div class="container">
+            <div class="hero-content">
+                <h1>Hi, I'm <span class="highlight">Your Name</span></h1>
+                <p>AI/ML Researcher and Engineer specializing in [Your Specialization]. Passionate about developing intelligent systems that solve real-world problems.</p>
+                <a href="#projects" class="btn">View My Work</a>
+                <a href="#contact" class="btn btn-outline">Get In Touch</a>
+            </div>
+            <div class="hero-image">
+                <img src="images/profile.jpg" alt="Professional headshot" onerror="this.src='https://via.placeholder.com/400x320?text=Your+Photo'">
+            </div>
+        </div>
+    </section>
+    
+    <section id="about" class="about">
+        <div class="container">
+            <div class="section-header">
+                <h2>About Me</h2>
+            </div>
+            <div class="about-content">
+                <div class="about-text">
+                    <p>I am an AI/ML professional with [X years] of experience in developing intelligent systems that leverage the power of machine learning and artificial intelligence. My expertise spans across [mention key areas like computer vision, NLP, reinforcement learning, etc.].</p>
+                    <p>Currently, I [current role or pursuit, e.g., "work as a Machine Learning Engineer at Company X" or "am pursuing my PhD in Computer Science with a focus on deep learning"].</p>
+                    <p>My research and professional interests include [list 2-3 specific areas of interest], and I'm passionate about [something you're passionate about in AI/ML].</p>
+                    <p>I hold a [Your Degree] in [Your Field] from [Your University] and have [any additional relevant qualifications or achievements].</p>
+                </div>
+                <div class="about-image">
+                    <img src="images/about.jpg" alt="About me image" onerror="this.src='https://via.placeholder.com/400x320?text=About+Image'">
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <section id="skills" class="skills">
+        <div class="container">
+            <div class="section-header">
+                <h2>Skills & Expertise</h2>
+            </div>
+            <div class="skill-categories">
+                <div class="skill-category">
+                    <h3>Machine Learning</h3>
+                    <div class="skill-list">
+                        <div class="skill-tag">Supervised Learning</div>
+                        <div class="skill-tag">Unsupervised Learning</div>
+                        <div class="skill-tag">Deep Learning</div>
+                        <div class="skill-tag">Neural Networks</div>
+                        <div class="skill-tag">Computer Vision</div>
+                        <div class="skill-tag">NLP</div>
+                        <div class="skill-tag">Reinforcement Learning</div>
+                        <div class="skill-tag">Time Series Analysis</div>
+                    </div>
+                </div>
+                <div class="skill-category">
+                    <h3>Programming</h3>
+                    <div class="skill-list">
+                        <div class="skill-tag">Python</div>
+                        <div class="skill-tag">R</div>
+                        <div class="skill-tag">SQL</div>
+                        <div class="skill-tag">Java</div>
+                        <div class="skill-tag">C++</div>
+                        <div class="skill-tag">JavaScript</div>
+                        <div class="skill-tag">MATLAB</div>
+                    </div>
+                </div>
+                <div class="skill-category">
+                    <h3>Frameworks & Tools</h3>
+                    <div class="skill-list">
+                        <div class="skill-tag">TensorFlow</div>
+                        <div class="skill-tag">PyTorch</div>
+                        <div class="skill-tag">Keras</div>
+                        <div class="skill-tag">scikit-learn</div>
+                        <div class="skill-tag">Pandas</div>
+                        <div class="skill-tag">NumPy</div>
+                        <div class="skill-tag">Matplotlib</div>
+                        <div class="skill-tag">OpenCV</div>
+                        <div class="skill-tag">NLTK</div>
+                        <div class="skill-tag">Hugging Face</div>
+                        <div class="skill-tag">Docker</div>
+                        <div class="skill-tag">Git</div>
+                    </div>
+                </div>
+                <div class="skill-category">
+                    <h3>Platforms & Infrastructure</h3>
+                    <div class="skill-list">
+                        <div class="skill-tag">AWS</div>
+                        <div class="skill-tag">Google Cloud</div>
+                        <div class="skill-tag">Azure</div>
+                        <div class="skill-tag">MLflow</div>
+                        <div class="skill-tag">Kubernetes</div>
+                        <div class="skill-tag">Hadoop</div>
+                        <div class="skill-tag">Spark</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <section id="projects" class="projects">
+        <div class="container">
+            <div class="section-header">
+                <h2>Projects</h2>
+            </div>
+            <div class="project-grid">
+                <!-- Projects will be loaded here from data.json -->
+                <div class="loading-message">Loading projects...</div>
+            </div>
+        </div>
+    </section>
+    
+    <section id="experience" class="experience">
+        <div class="container">
+            <div class="section-header">
+                <h2>Experience</h2>
+            </div>
+            <div class="timeline">
+                <div class="timeline-item">
+                    <div class="timeline-date">2023 - Present</div>
+                    <h3>Senior Machine Learning Engineer</h3>
+                    <h4>Company Name</h4>
+                    <p>Leading the development of AI systems for [specific application]. Responsible for designing and implementing machine learning algorithms, collaborating with cross-functional teams, and deploying models to production.</p>
+                    <ul>
+                        <li>Achievement 1</li>
+                        <li>Achievement 2</li>
+                        <li>Achievement 3</li>
+                    </ul>
+                </div>
+                
+                <div class="timeline-item">
+                    <div class="timeline-date">2021 - 2023</div>
+                    <h3>Data Scientist</h3>
+                    <h4>Previous Company</h4>
+                    <p>Developed and deployed machine learning models for [specific domain]. Worked closely with data engineers and product managers to integrate AI solutions into company products.</p>
+                    <ul>
+                        <li>Achievement 1</li>
+                        <li>Achievement 2</li>
+                        <li>Achievement 3</li>
+                    </ul>
+                </div>
+                
+                <div class="timeline-item">
+                    <div class="timeline-date">2019 - 2021</div>
+                    <h3>Research Assistant</h3>
+                    <h4>University Name</h4>
+                    <p>Conducted research in [specific area of AI/ML]. Published papers in top-tier conferences and collaborated with faculty and graduate students on cutting-edge AI research.</p>
+                    <ul>
+                        <li>Achievement 1</li>
+                        <li>Achievement 2</li>
+                        <li>Achievement 3</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <section id="publications" class="publications">
+        <div class="container">
+            <div class="section-header">
+                <h2>Publications</h2>
+            </div>
+            <div class="publication-list">
+                <div class="publication-card">
+                    <div class="publication-title">Paper Title Goes Here: A Novel Approach to Something Interesting in AI</div>
+                    <div class="publication-authors">Your Name, Collaborator 1, Collaborator 2</div>
+                    <div class="publication-venue">Conference/Journal Name, Year</div>
+                    <p>Brief description of the paper's contribution to the field and its impact. What problem did you solve? What approach did you take? What were the results?</p>
+                    <div class="publication-links">
+                        <a href="#" target="_blank">Paper</a>
+                        <a href="#" target="_blank">Code</a>
+                        <a href="#" target="_blank">Presentation</a>
+                    </div>
+                </div>
+                
+                <div class="publication-card">
+                    <div class="publication-title">Another Interesting Paper Title: Improving Something with ML</div>
+                    <div class="publication-authors">Your Name, Collaborator 1, Collaborator 2</div>
+                    <div class="publication-venue">Conference/Journal Name, Year</div>
+                    <p>Brief description of the paper's contribution to the field and its impact. What problem did you solve? What approach did you take? What were the results?</p>
+                    <div class="publication-links">
+                        <a href="#" target="_blank">Paper</a>
+                        <a href="#" target="_blank">Code</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <section id="contact" class="contact">
+        <div class="container">
+            <div class="section-header">
+                <h2>Get In Touch</h2>
+            </div>
+            <div class="contact-content">
+                <div class="contact-info">
+                    <p>I'm always open to discussing new projects, opportunities, or collaborations. Feel free to reach out to me using the form or through my social media profiles.</p>
+                    <p>Based in [Your Location]</p>
+                    <div class="contact-links">
+                        <a href="mailto:youremail@example.com">Email</a>
+                        <a href="https://linkedin.com/in/yourprofile" target="_blank">LinkedIn</a>
+                        <a href="https://twitter.com/yourhandle" target="_blank">Twitter</a>
+                        <a href="https://github.com/yourusername" target="_blank">GitHub</a>
+                        <a href="https://scholar.google.com/citations?user=yourid" target="_blank">Google Scholar</a>
+                    </div>
+                </div>
+                <div class="contact-form">
+                    <form id="contact-form">
+                        <div class="form-group">
+                            <label for="name">Name</label>
+                            <input type="text" id="name" name="name" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="email">Email</label>
+                            <input type="email" id="email" name="email" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="subject">Subject</label>
+                            <input type="text" id="subject" name="subject" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="message">Message</label>
+                            <textarea id="message" name="message" required></textarea>
+                        </div>
+                        <button type="submit" class="btn">Send Message</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="logo">Your Name</div>
+                <div class="footer-links">
+                    <a href="#about">About</a>
+                    <a href="#skills">Skills</a>
+                    <a href="#projects">Projects</a>
+                    <a href="#experience">Experience</a>
+                    <a href="#publications">Publications</a>
+                    <a href="#contact">Contact</a>
+                </div>
+                <div class="copyright">© 2025 Your Name. All rights reserved.</div>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Function to load projects from data.json
+        async function loadProjects() {
+            try {
+                const response = await fetch('data.json');
+                const data = await response.json();
+                
+                const projectGrid = document.querySelector('.project-grid');
+                projectGrid.innerHTML = ''; // Clear loading message
+                
+                // Loop through each project and create HTML elements
+                data.projects.forEach(project => {
+                    // Create HTML for tags
+                    const tagsHTML = project.tags.map(tag => 
+                        `<span class="project-tag">${tag}</span>`
+                    ).join('');
+                    
+                    // Create HTML for links
+                    const linksHTML = Object.entries(project.links).map(([key, url]) => 
+                        `<a href="${url}" target="_blank">${key.charAt(0).toUpperCase() + key.slice(1)}</a>`
+                    ).join('');
+                    
+                    // Create the project card HTML
+                    const projectHTML = `
+                        <div class="project-card">
+                            <div class="project-image">
+                                <img src="${project.image}" alt="${project.title}" onerror="this.src='https://via.placeholder.com/350x200?text=Project+Image'">
+                            </div>
+                            <div class="project-content">
+                                <h3>${project.title}</h3>
+                                <p>${project.description}</p>
+                                <div class="project-tags">
+                                    ${tagsHTML}
+                                </div>
+                                <div class="project-links">
+                                    ${linksHTML}
+                                </div>
+                            </div>
+                        </div>
+                    `;
+                    
+                    // Add the project to the grid
+                    projectGrid.innerHTML += projectHTML;
+                });
+                
+            } catch (error) {
+                console.error('Error loading projects:', error);
+                const projectGrid = document.querySelector('.project-grid');
+                projectGrid.innerHTML = '<div class="error-message">Failed to load projects. Please make sure data.json is correctly formatted and accessible.</div>';
+            }
+        }
+        
+        // Load projects when the page loads
+        document.addEventListener('DOMContentLoaded', loadProjects);
+        
+        // Simple form handler (for demonstration)
+        const contactForm = document.getElementById('contact-form');
+        if (contactForm) {
+            contactForm.addEventListener('submit', function(e) {
+                e.preventDefault();
+                alert('This form submission is just a demo. In a real portfolio, this would send an email or save to a database.');
+                // In a real implementation, you would handle the form submission here
+                // contactForm.reset();
+            });
+        }
+    </script>
+</body>
+</html>
