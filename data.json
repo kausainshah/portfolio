@@ -2,7 +2,7 @@
   "projects": [
     {
       "id": "Audience Analytics",
-      "title": "Project Name 1",
+      "title": "Audience Analytics",
       "description": "A sophisticated image classification system that utilizes state-of-the-art deep learning techniques to accurately identify objects in real-time.",
       "image": "images/project1.jpg",
       "tags": ["Computer Vision", "PyTorch", "CNN"],
@@ -14,8 +14,8 @@
     },
     {
       "id": "project2",
-      "title": "Project Name 2",
-      "description": "An advanced natural language processing system that can understand and generate human-like text for customer service applications.",
+      "title": "AI Based Call Center Agent Performance Monitoring",
+      "description": "Using ASR with custom KPIs for call center agent performance monitoring",
       "image": "images/project2.jpg",
       "tags": ["NLP", "Transformers", "BERT"],
       "links": {
