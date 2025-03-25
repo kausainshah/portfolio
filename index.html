@@ -231,14 +231,98 @@
         }
         
         .projects {
-            background-color: white;
+            padding: 50px 0;
+        }
+        
+/*         .container {
+            max-width: 1200px;
+            margin: 0 auto;
+        } */
+        
+        .section-header h2 {
+            text-align: center;
+            font-size: 2.5em;
+            margin-bottom: 20px;
+        }
+        
+        .tabs {
+            display: flex;
+            justify-content: center;
+            margin-bottom: 30px;
+        }
+        
+        .tab-btn {
+            padding: 10px 20px;
+            margin: 0 5px;
+            border: none;
+            background: #f0f0f0;
+            cursor: pointer;
+            font-size: 1.1em;
+            transition: background 0.3s;
+        }
+        
+        .tab-btn:hover {
+            background: #ddd;
+        }
+        
+        .tab-btn.active {
+            background: #007bff;
+            color: white;
         }
         
         .project-grid {
             display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 20px;
+        }
+        
+        .project-card {
+            border: 1px solid #ddd;
+            padding: 20px;
+            text-align: center;
+        }
+        
+        .project-card img {
+            max-width: 100%;
+            height: auto;
+        }
+        
+        .project-card h3 {
+            margin: 15px 0;
+        }
+        
+        .project-card p {
+            color: #666;
+        }
+        
+        .project-card .tags {
+            margin: 10px 0;
+        }
+        
+        .project-card .tags span {
+            background: #e0e0e0;
+            padding: 5px 10px;
+            margin: 5px;
+            display: inline-block;
+            border-radius: 3px;
+        }
+        
+        .project-card .links a {
+            margin: 0 10px;
+            text-decoration: none;
+            color: #007bff;
+        }
+        
+        .loading-message {
+            text-align: center;
+            font-size: 1.2em;
+            color: #666;
+        }        
+/*         .project-grid {
+            display: grid;
             grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
             gap: 2rem;
-        }
+        } */
         
         .project-card {
             background-color: white;
@@ -659,6 +743,12 @@
         <div class="container">
             <div class="section-header">
                 <h2>Projects</h2>
+            </div>
+            <div class="tabs">
+                <button class="tab-btn active" data-domain="CV">Computer Vision</button>
+                <button class="tab-btn" data-domain="NLP">NLP</button>
+                <button class="tab-btn" data-domain="Classical ML">Classical ML</button>
+                <button class="tab-btn" data-domain="Gen AI">Generative AI</button>
             </div>
             <div class="project-grid">
                 <!-- Projects will be loaded here from data.json -->
