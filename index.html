@@ -757,6 +757,61 @@
         </div>
     </section>
     
+    <!-- JavaScript goes here -->
+    <script>
+        document.addEventListener("DOMContentLoaded", () => {
+            const projectGrid = document.querySelector(".project-grid");
+            const tabButtons = document.querySelectorAll(".tab-btn");
+
+            fetch("data.json")
+                .then(response => response.json())
+                .then(data => {
+                    const projects = data.projects;
+                    projectGrid.innerHTML = "";
+
+                    function displayProjects(domain) {
+                        projectGrid.innerHTML = "";
+                        const filteredProjects = projects.filter(project => project.domain === domain);
+                        filteredProjects.forEach(project => {
+                            const projectCard = document.createElement("div");
+                            projectCard.classList.add("project-card");
+                            projectCard.innerHTML = `
+                                <img src="${project.image}" alt="${project.title}">
+                                <h3>${project.title}</h3>
+                                <p>${project.description}</p>
+                                <div class="tags">
+                                    ${project.tags.map(tag => `<span>${tag}</span>`).join("")}
+                                </div>
+                                <div class="links">
+                                    ${project.links.github ? `<a href="${project.links.github}" target="_blank">GitHub</a>` : ""}
+                                    ${project.links.demo ? `<a href="${project.links.demo}" target="_blank">Demo</a>` : ""}
+                                    ${project.links.paper ? `<a href="${project.links.paper}" target="_blank">Paper</a>` : ""}
+                                    ${project.links.blog ? `<a href="${project.links.blog}" target="_blank">Blog</a>` : ""}
+                                    ${project.links.documentation ? `<a href="${project.links.documentation}" target="_blank">Docs</a>` : ""}
+                                </div>
+                            `;
+                            projectGrid.appendChild(projectCard);
+                        });
+                    }
+
+                    displayProjects("CV");
+
+                    tabButtons.forEach(button => {
+                        button.addEventListener("click", () => {
+                            tabButtons.forEach(btn => btn.classList.remove("active"));
+                            button.classList.add("active");
+                            const domain = button.getAttribute("data-domain");
+                            displayProjects(domain);
+                        });
+                    });
+                })
+                .catch(error => {
+                    projectGrid.innerHTML = "Failed to load projects.";
+                    console.error("Error loading projects:", error);
+                });
+        });
+    </script>
+    
     <section id="experience" class="experience">
         <div class="container">
             <div class="section-header">
