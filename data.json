@@ -1,6 +1,14 @@
 {
   "projects": [
     {
+      "id": "p5",
+      "title": "Generative AI Solution for African American Community",
+      "description": "A Generative AI solution tailored for unbiased and fair needs of African American Comunity",
+      "image": "images/project1.jpg",
+      "tags": ["Computer Vision", "PyTorch", "CNN"],
+      "domain": "Gen AI",
+    },
+    {
       "id": "Audience Analytics",
       "title": "Audience Analytics",
       "description": "A sophisticated image classification system that utilizes state-of-the-art deep learning techniques to accurately identify objects in real-time.",
