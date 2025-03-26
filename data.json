@@ -7,6 +7,11 @@
       "image": "images/project1.jpg",
       "tags": ["Computer Vision", "PyTorch", "CNN"],
       "domain": "Gen AI",
+      "links": {
+        "github": "https://github.com/yourusername/project1",
+        "demo": "https://demo-link.com/project1",
+        "paper": "https://paper-link.com/project1"
+      }
     },
     {
       "id": "Audience Analytics",
