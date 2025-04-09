@@ -81,8 +81,7 @@
         {
       "id": "project7",
       "title": "QA for Pharmaceutical (Whitepaper)",
-      "description": "Researched and developed a proof of concept for a clinical QA system using PubMedBERT and ClinicaBERT, focusing on question
-classification, information retrieval, and answer generation with state-of-the-art transformer techniques.",
+      "description": "Researched and developed a proof of concept for a clinical QA system using PubMedBERT and ClinicaBERT, focusing on question classification, information retrieval, and answer generation with state-of-the-art transformer techniques.",
       "image": "images/project4.jpg",
       "tags": ["Generative AI", "3DMM", "Diffusion Models"],
       "domain": "NLP",
@@ -95,8 +94,7 @@ classification, information retrieval, and answer generation with state-of-the-a
         {
       "id": "project8",
       "title": "AI Based Call Center Agent Performance Monitoring",
-      "description": "Implemented an Azure-powered speech-to-text solution with voice activity detection, speech enhancement, and text classification for generating
-agent and client transcriptions.",
+      "description": "Implemented an Azure-powered speech-to-text solution with voice activity detection, speech enhancement, and text classification for generating agent and client transcriptions.",
       "image": "images/project4.jpg",
       "tags": ["Generative AI", "3DMM", "Diffusion Models"],
       "domain": "NLP",
@@ -109,8 +107,7 @@ agent and client transcriptions.",
         {
       "id": "project9",
       "title": "Traffic & Audience Analytics",
-      "description": "Built a real-time computer vision platform for traffic and audience analytics, including object detection, traffic violation monitoring, lane
-detection, footfall counting, and age-gender analytics, integrated with a Java-based web portal (for traffic and retail audience surveillance).",
+      "description": "Built a real-time computer vision platform for traffic and audience analytics, including object detection, traffic violation monitoring, lane detection, footfall counting, and age-gender analytics, integrated with a Java-based web portal (for traffic and retail audience surveillance).",
       "image": "images/project4.jpg",
       "tags": ["Generative AI", "3DMM", "Diffusion Models"],
       "domain": "Computer Vison",
