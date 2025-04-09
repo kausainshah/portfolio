@@ -344,71 +344,90 @@
         </div>
     </footer>
 
-    <script>
-        // Function to load projects from data.json
-        async function loadProjects() {
-            try {
-                const response = await fetch('data.json');
-                const data = await response.json();
+<script>
+    // Function to load projects from data.json
+    async function loadProjects() {
+        try {
+            const response = await fetch('data.json');
+            const data = await response.json();
+            
+            const projectGrid = document.querySelector('.project-grid');
+            projectGrid.innerHTML = ''; // Clear loading message
+            
+            // Tool icon mapping (add more as needed)
+            const toolIcons = {
+                "Python": "🐍",
+                "PyTorch": "🔥",
+                "TensorFlow": "⚡",
+                "Scikit-learn": "🔍",
+                "Pandas": "🐼",
+                "NumPy": "#",
+                "Matplotlib": "📊",
+                "OpenCV": "👁️",
+                "Diffusers": "🌪️",
+                "3DMM": "👤",
+                "JavaScript": "JS",
+                "React": "⚛️",
+                "Node.js": "🟢"
+            };
+            
+            // Loop through each project and create HTML elements
+            data.projects.forEach(project => {
+                // Create HTML for tools (changed from tags)
+                const toolsHTML = project.tools.map(tool => 
+                    `<div class="project-tool">
+                        <span class="tool-icon">${toolIcons[tool] || "🛠️"}</span>
+                        <span class="tool-name">${tool}</span>
+                    </div>`
+                ).join('');
                 
-                const projectGrid = document.querySelector('.project-grid');
-                projectGrid.innerHTML = ''; // Clear loading message
+                // Create HTML for links
+                const linksHTML = Object.entries(project.links).map(([key, url]) => 
+                    `<a href="${url}" target="_blank">${key.charAt(0).toUpperCase() + key.slice(1)}</a>`
+                ).join('');
                 
-                // Loop through each project and create HTML elements
-                data.projects.forEach(project => {
-                    // Create HTML for tags
-                    const tagsHTML = project.tags.map(tag => 
-                        `<span class="project-tag">${tag}</span>`
-                    ).join('');
-                    
-                    // Create HTML for links
-                    const linksHTML = Object.entries(project.links).map(([key, url]) => 
-                        `<a href="${url}" target="_blank">${key.charAt(0).toUpperCase() + key.slice(1)}</a>`
-                    ).join('');
-                    
-                    // Create the project card HTML
-                    const projectHTML = `
-                        <div class="project-card">
-                            <div class="project-image">
-                                <img src="${project.image}" alt="${project.title}" onerror="this.src='https://via.placeholder.com/350x200?text=Project+Image'">
+                // Create the project card HTML
+                const projectHTML = `
+                    <div class="project-card">
+                        <div class="project-image">
+                            <img src="${project.image}" alt="${project.title}" onerror="this.src='https://via.placeholder.com/350x200?text=Project+Image'">
+                        </div>
+                        <div class="project-content">
+                            <h3>${project.title}</h3>
+                            <p>${project.description}</p>
+                            <div class="project-tools">
+                                ${toolsHTML}
                             </div>
-                            <div class="project-content">
-                                <h3>${project.title}</h3>
-                                <p>${project.description}</p>
-                                <div class="project-tags">
-                                    ${tagsHTML}
-                                </div>
-                                <div class="project-links">
-                                    ${linksHTML}
-                                </div>
+                            <div class="project-links">
+                                ${linksHTML}
                             </div>
                         </div>
-                    `;
-                    
-                    // Add the project to the grid
-                    projectGrid.innerHTML += projectHTML;
-                });
+                    </div>
+                `;
                 
-            } catch (error) {
-                console.error('Error loading projects:', error);
-                const projectGrid = document.querySelector('.project-grid');
-                projectGrid.innerHTML = '<div class="error-message">Failed to load projects. Please make sure data.json is correctly formatted and accessible.</div>';
-            }
-        }
-        
-        // Load projects when the page loads
-        document.addEventListener('DOMContentLoaded', loadProjects);
-        
-        // Simple form handler (for demonstration)
-        const contactForm = document.getElementById('contact-form');
-        if (contactForm) {
-            contactForm.addEventListener('submit', function(e) {
-                e.preventDefault();
-                alert('This form submission is just a demo. In a real portfolio, this would send an email or save to a database.');
-                // In a real implementation, you would handle the form submission here
-                // contactForm.reset();
+                // Add the project to the grid
+                projectGrid.innerHTML += projectHTML;
             });
+            
+        } catch (error) {
+            console.error('Error loading projects:', error);
+            const projectGrid = document.querySelector('.project-grid');
+            projectGrid.innerHTML = '<div class="error-message">Failed to load projects. Please make sure data.json is correctly formatted and accessible.</div>';
         }
-    </script>
+    }
+    
+    // Load projects when the page loads
+    document.addEventListener('DOMContentLoaded', loadProjects);
+    
+    // Simple form handler (for demonstration)
+    const contactForm = document.getElementById('contact-form');
+    if (contactForm) {
+        contactForm.addEventListener('submit', function(e) {
+            e.preventDefault();
+            alert('This form submission is just a demo. In a real portfolio, this would send an email or save to a database.');
+        });
+    }
+</script>
+
 </body>
 </html>
