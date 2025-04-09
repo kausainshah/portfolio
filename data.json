@@ -38,7 +38,87 @@
         "demo": "https://demo-link.com/project4",
         "paper": "https://paper-link.com/project4"
       }
+    },
+    {
+      "id": "project4",
+      "title": "Generative AI Accelerator For Real Estate",
+      "description": "A virtual real estate agent, that allows users, experience real estate in VR along with Gen AI powered property search.",
+      "image": "images/project4.jpg",
+      "tags": ["Generative AI", "3DMM", "Diffusion Models"],
+      "domain": "Gen AI",
+      "links": {
+        "github": "https://github.com/yourusername/project4",
+        "demo": "https://demo-link.com/project4",
+        "paper": "https://paper-link.com/project4"
+      }
+    },
+        {
+      "id": "project5",
+      "title": "Healthcare Transportation Accelerator",
+      "description": "Classical ML based classification problem for Ambulance Show/No Show. A what if analysis tool for revenue projections by reducing No-show costs.",
+      "image": "images/project4.jpg",
+      "tags": ["Generative AI", "3DMM", "Diffusion Models"],
+      "domain": "Classical ML",
+      "links": {
+        "github": "https://github.com/yourusername/project4",
+        "demo": "https://demo-link.com/project4",
+        "paper": "https://paper-link.com/project4"
+      }
+    },
+        {
+      "id": "project6",
+      "title": "Real time Automated Workspace Analytics",
+      "description": "A CV based system for workspace analytics, including object detection and tracking, with Kubernetes-based autoscaling and interactive dashboards for key performance metrics.",
+      "image": "images/project4.jpg",
+      "tags": ["Generative AI", "3DMM", "Diffusion Models"],
+      "domain": "Computer Vision",
+      "links": {
+        "github": "https://github.com/yourusername/project4",
+        "demo": "https://demo-link.com/project4",
+        "paper": "https://paper-link.com/project4"
+      }
+    },
+        {
+      "id": "project7",
+      "title": "QA for Pharmaceutical (Whitepaper)",
+      "description": "Researched and developed a proof of concept for a clinical QA system using PubMedBERT and ClinicaBERT, focusing on question
+classification, information retrieval, and answer generation with state-of-the-art transformer techniques.",
+      "image": "images/project4.jpg",
+      "tags": ["Generative AI", "3DMM", "Diffusion Models"],
+      "domain": "NLP",
+      "links": {
+        "github": "https://github.com/yourusername/project4",
+        "demo": "https://demo-link.com/project4",
+        "paper": "https://paper-link.com/project4"
+      }
+    },
+        {
+      "id": "project8",
+      "title": "AI Based Call Center Agent Performance Monitoring",
+      "description": "Implemented an Azure-powered speech-to-text solution with voice activity detection, speech enhancement, and text classification for generating
+agent and client transcriptions.",
+      "image": "images/project4.jpg",
+      "tags": ["Generative AI", "3DMM", "Diffusion Models"],
+      "domain": "NLP",
+      "links": {
+        "github": "https://github.com/yourusername/project4",
+        "demo": "https://demo-link.com/project4",
+        "paper": "https://paper-link.com/project4"
+      }
+    },
+        {
+      "id": "project9",
+      "title": "Traffic & Audience Analytics",
+      "description": "Built a real-time computer vision platform for traffic and audience analytics, including object detection, traffic violation monitoring, lane
+detection, footfall counting, and age-gender analytics, integrated with a Java-based web portal (for traffic and retail audience surveillance).",
+      "image": "images/project4.jpg",
+      "tags": ["Generative AI", "3DMM", "Diffusion Models"],
+      "domain": "Computer Vison",
+      "links": {
+        "github": "https://github.com/yourusername/project4",
+        "demo": "https://demo-link.com/project4",
+        "paper": "https://paper-link.com/project4"
+      }
     }
-
   ]
 }
