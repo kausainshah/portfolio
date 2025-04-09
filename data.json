@@ -1,7 +1,7 @@
 {
   "projects": [
     {
-      "id": "project4",
+      "id": "project1",
       "title": "Talking Face Generator",
       "description": "A generative AI system that creates realistic talking face animations from audio input using advanced 3D modeling and diffusion techniques.",
       "image": "images/project4.jpg",
@@ -12,6 +12,33 @@
         "demo": "https://demo-link.com/project4",
         "paper": "https://paper-link.com/project4"
       }
+    },
+        {
+      "id": "project2",
+      "title": "Capacity Planning for Healthcare",
+      "description": "Nursing Staff forecasting for a big Hospital. Planning of staff required per department per shift.",
+      "image": "images/project4.jpg",
+      "tags": ["Generative AI", "3DMM", "Diffusion Models"],
+      "domain": "Classical ML",
+      "links": {
+        "github": "https://github.com/yourusername/project4",
+        "demo": "https://demo-link.com/project4",
+        "paper": "https://paper-link.com/project4"
+      }
+    },
+    {
+      "id": "project3",
+      "title": "Generative AI Chatbot for NEMT",
+      "description": "An Gen AI based chatbot to automate the process of information gathering and booking/canceling rides for the customer base.",
+      "image": "images/project4.jpg",
+      "tags": ["Generative AI", "3DMM", "Diffusion Models"],
+      "domain": "Gen AI",
+      "links": {
+        "github": "https://github.com/yourusername/project4",
+        "demo": "https://demo-link.com/project4",
+        "paper": "https://paper-link.com/project4"
+      }
     }
+
   ]
 }
