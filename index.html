@@ -2,6 +2,11 @@
 <html lang="en">
 <head>
     <link rel="stylesheet" href="css/styles.css">
+    <!-- Consider adding these for better compatibility -->
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <!-- Add Font Awesome if you're using icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Syed Kausain Mehdi - AI/ML Portfolio</title>
@@ -121,60 +126,180 @@
         <div class="container">
             <div class="section-header">
                 <h2>Skills & Expertise</h2>
+                <p>Technologies I work with</p>
             </div>
-            <div class="skill-categories">
-                <div class="skill-category">
-                    <h3>Machine Learning</h3>
-                    <div class="skill-list">
-                        <div class="skill-tag">Supervised Learning</div>
-                        <div class="skill-tag">Unsupervised Learning</div>
-                        <div class="skill-tag">Deep Learning</div>
-                        <div class="skill-tag">Neural Networks</div>
-                        <div class="skill-tag">Computer Vision</div>
-                        <div class="skill-tag">NLP</div>
-                        <div class="skill-tag">Reinforcement Learning</div>
-                        <div class="skill-tag">Time Series Analysis</div>
+            
+            <div class="skills-grid">
+                <!-- Languages -->
+                <div class="skill-card">
+                    <div class="skill-header">
+                        <i class="fas fa-code"></i>
+                        <h3>Languages</h3>
+                    </div>
+                    <div class="skill-tags">
+                        <span class="skill-tag">Python</span>
+                        <span class="skill-tag">Bash</span>
+                        <span class="skill-tag">R</span>
                     </div>
                 </div>
-                <div class="skill-category">
-                    <h3>Programming</h3>
-                    <div class="skill-list">
-                        <div class="skill-tag">Python</div>
-                        <div class="skill-tag">R</div>
-                        <div class="skill-tag">SQL</div>
-                        <div class="skill-tag">Java</div>
-                        <div class="skill-tag">C++</div>
-                        <div class="skill-tag">JavaScript</div>
-                        <div class="skill-tag">MATLAB</div>
+                
+                <!-- NN/AutoML Frameworks -->
+                <div class="skill-card">
+                    <div class="skill-header">
+                        <i class="fas fa-brain"></i>
+                        <h3>NN/AutoML Frameworks</h3>
+                    </div>
+                    <div class="skill-tags">
+                        <span class="skill-tag">PyTorch</span>
+                        <span class="skill-tag">TensorFlow</span>
+                        <span class="skill-tag">Keras</span>
+                        <span class="skill-tag">ONNX</span>
+                        <span class="skill-tag">TensorRT</span>
+                        <span class="skill-tag">OpenVINO</span>
+                        <span class="skill-tag">PyCaret</span>
+                        <span class="skill-tag">H2O AutoML</span>
+                        <span class="skill-tag">MLJar</span>
                     </div>
                 </div>
-                <div class="skill-category">
-                    <h3>Frameworks & Tools</h3>
-                    <div class="skill-list">
-                        <div class="skill-tag">TensorFlow</div>
-                        <div class="skill-tag">PyTorch</div>
-                        <div class="skill-tag">Keras</div>
-                        <div class="skill-tag">scikit-learn</div>
-                        <div class="skill-tag">Pandas</div>
-                        <div class="skill-tag">NumPy</div>
-                        <div class="skill-tag">Matplotlib</div>
-                        <div class="skill-tag">OpenCV</div>
-                        <div class="skill-tag">NLTK</div>
-                        <div class="skill-tag">Hugging Face</div>
-                        <div class="skill-tag">Docker</div>
-                        <div class="skill-tag">Git</div>
+                
+                <!-- Databases/Services -->
+                <div class="skill-card">
+                    <div class="skill-header">
+                        <i class="fas fa-database"></i>
+                        <h3>Databases/Services</h3>
+                    </div>
+                    <div class="skill-tags">
+                        <span class="skill-tag">MySQL</span>
+                        <span class="skill-tag">MongoDB</span>
+                        <span class="skill-tag">DynamoDB</span>
+                        <span class="skill-tag">SQL</span>
+                        <span class="skill-tag">SQLAlchemy</span>
+                        <span class="skill-tag">Amazon Redshift</span>
                     </div>
                 </div>
-                <div class="skill-category">
-                    <h3>Platforms & Infrastructure</h3>
-                    <div class="skill-list">
-                        <div class="skill-tag">AWS</div>
-                        <div class="skill-tag">Google Cloud</div>
-                        <div class="skill-tag">Azure</div>
-                        <div class="skill-tag">MLflow</div>
-                        <div class="skill-tag">Kubernetes</div>
-                        <div class="skill-tag">Hadoop</div>
-                        <div class="skill-tag">Spark</div>
+                
+                <!-- Data Pipeline Orchestration -->
+                <div class="skill-card">
+                    <div class="skill-header">
+                        <i class="fas fa-project-diagram"></i>
+                        <h3>Data Pipeline Orchestration</h3>
+                    </div>
+                    <div class="skill-tags">
+                        <span class="skill-tag">Airflow</span>
+                        <span class="skill-tag">DVC</span>
+                        <span class="skill-tag">MLFlow</span>
+                        <span class="skill-tag">Kubernetes</span>
+                    </div>
+                </div>
+                
+                <!-- Web Apps/APIs -->
+                <div class="skill-card">
+                    <div class="skill-header">
+                        <i class="fas fa-globe"></i>
+                        <h3>Web Apps/APIs</h3>
+                    </div>
+                    <div class="skill-tags">
+                        <span class="skill-tag">Flask</span>
+                        <span class="skill-tag">gRPC</span>
+                        <span class="skill-tag">FastAPI</span>
+                    </div>
+                </div>
+                
+                <!-- Visualization/Dashboards -->
+                <div class="skill-card">
+                    <div class="skill-header">
+                        <i class="fas fa-chart-line"></i>
+                        <h3>Visualization/Dashboards</h3>
+                    </div>
+                    <div class="skill-tags">
+                        <span class="skill-tag">Matplotlib</span>
+                        <span class="skill-tag">Plotly</span>
+                        <span class="skill-tag">Seaborn</span>
+                        <span class="skill-tag">Bokeh</span>
+                        <span class="skill-tag">Dash</span>
+                    </div>
+                </div>
+                
+                <!-- Generative-AI/VectorDB -->
+                <div class="skill-card">
+                    <div class="skill-header">
+                        <i class="fas fa-robot"></i>
+                        <h3>Generative-AI/VectorDB</h3>
+                    </div>
+                    <div class="skill-tags">
+                        <span class="skill-tag">LangChain</span>
+                        <span class="skill-tag">LangGraph</span>
+                        <span class="skill-tag">ChromaDB</span>
+                        <span class="skill-tag">Meshlab</span>
+                        <span class="skill-tag">LanceDB</span>
+                        <span class="skill-tag">Pinecone</span>
+                        <span class="skill-tag">OpenAI</span>
+                        <span class="skill-tag">Dall-e</span>
+                        <span class="skill-tag">Mid-Journey</span>
+                        <span class="skill-tag">HuggingFace</span>
+                        <span class="skill-tag">Decentraland</span>
+                        <span class="skill-tag">LLMStudio</span>
+                        <span class="skill-tag">Neo4j</span>
+                        <span class="skill-tag">Amazon Bedrock</span>
+                        <span class="skill-tag">Azure OpenAI</span>
+                    </div>
+                </div>
+                
+                <!-- Data Governance -->
+                <div class="skill-card">
+                    <div class="skill-header">
+                        <i class="fas fa-shield-alt"></i>
+                        <h3>Data Governance</h3>
+                    </div>
+                    <div class="skill-tags">
+                        <span class="skill-tag">Informatica Axon</span>
+                    </div>
+                </div>
+                
+                <!-- Data Processing & Analysis -->
+                <div class="skill-card">
+                    <div class="skill-header">
+                        <i class="fas fa-table"></i>
+                        <h3>Data Processing & Analysis</h3>
+                    </div>
+                    <div class="skill-tags">
+                        <span class="skill-tag">Pandas</span>
+                        <span class="skill-tag">NumPy</span>
+                        <span class="skill-tag">SciPy</span>
+                        <span class="skill-tag">Scikit-Learn</span>
+                        <span class="skill-tag">pySpark</span>
+                        <span class="skill-tag">SageMaker</span>
+                        <span class="skill-tag">Databricks</span>
+                    </div>
+                </div>
+                
+                <!-- Language Processing & Analysis -->
+                <div class="skill-card">
+                    <div class="skill-header">
+                        <i class="fas fa-language"></i>
+                        <h3>Language Processing</h3>
+                    </div>
+                    <div class="skill-tags">
+                        <span class="skill-tag">NLTK</span>
+                        <span class="skill-tag">spaCy</span>
+                        <span class="skill-tag">Gensim</span>
+                        <span class="skill-tag">transformers</span>
+                        <span class="skill-tag">HuggingFace</span>
+                        <span class="skill-tag">H2O</span>
+                    </div>
+                </div>
+                
+                <!-- Development & Deployment -->
+                <div class="skill-card">
+                    <div class="skill-header">
+                        <i class="fas fa-server"></i>
+                        <h3>Development & Deployment</h3>
+                    </div>
+                    <div class="skill-tags">
+                        <span class="skill-tag">Git</span>
+                        <span class="skill-tag">Workflow</span>
+                        <span class="skill-tag">Docker</span>
+                        <span class="skill-tag">CI/CD</span>
                     </div>
                 </div>
             </div>
