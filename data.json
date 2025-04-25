@@ -7,6 +7,7 @@
       "image": "images/project4.jpg",
       "tags": ["Generative AI", "3DMM", "Diffusion Models"],
       "domain": "Gen AI",
+      "order": 1,
       "links": {
         "github": "https://github.com/yourusername/project4",
         "demo": "https://demo-link.com/project4",
@@ -20,6 +21,7 @@
       "image": "images/project4.jpg",
       "tags": ["Generative AI", "3DMM", "Diffusion Models"],
       "domain": "Classical ML",
+      "order": 2,
       "links": {
         "github": "https://github.com/yourusername/project4",
         "demo": "https://demo-link.com/project4",
