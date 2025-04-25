@@ -746,6 +746,95 @@ footer {
     background: #f0f0f0;
 }
 
+/* Skills Section Styles */
+.skills {
+    padding: 80px 0;
+    background: #f9f9f9;
+}
+
+.section-header {
+    text-align: center;
+    margin-bottom: 50px;
+}
+
+.section-header h2 {
+    font-size: 2.5rem;
+    margin-bottom: 15px;
+    color: #2c3e50;
+}
+
+.section-header p {
+    color: #7f8c8d;
+    font-size: 1.1rem;
+}
+
+.skills-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 25px;
+}
+
+.skill-card {
+    background: white;
+    border-radius: 10px;
+    padding: 25px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.skill-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+}
+
+.skill-header {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+    padding-bottom: 15px;
+    border-bottom: 1px solid #eee;
+}
+
+.skill-header i {
+    font-size: 1.5rem;
+    margin-right: 15px;
+    color: #3498db;
+}
+
+.skill-header h3 {
+    margin: 0;
+    font-size: 1.3rem;
+    color: #2c3e50;
+}
+
+.skill-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.skill-tag {
+    background: #f1f8ff;
+    color: #3498db;
+    padding: 6px 12px;
+    border-radius: 20px;
+    font-size: 0.85rem;
+    transition: all 0.3s ease;
+}
+
+.skill-tag:hover {
+    background: #3498db;
+    color: white;
+    transform: scale(1.05);
+}
+
+@media (max-width: 768px) {
+    .skills-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+
 @media (max-width: 768px) {
     .project-card {
         flex: 0 0 250px;
