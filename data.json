@@ -110,7 +110,7 @@
       "id": "project9",
       "title": "Traffic & Audience Analytics",
       "description": "Built a real-time computer vision platform for traffic and audience analytics, including object detection, traffic violation monitoring, lane detection, footfall counting, and age-gender analytics, integrated with a Java-based web portal (for traffic and retail audience surveillance).",
-      "image": "images/project4.jpg",
+      "image": "images/adlytic.png",
       "tags": ["Generative AI", "3DMM", "Diffusion Models"],
       "domain": "Computer Vison",
       "links": {
