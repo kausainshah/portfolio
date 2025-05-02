@@ -80,6 +80,7 @@ nav {
     align-items: center;
     gap: 3rem;
     width: 100%;
+    flex-direction: row; /* Explicitly set to row */
 }
 
 .hero-content {
@@ -90,33 +91,36 @@ nav {
 .hero-image {
     flex: 1;
     display: flex;
-    justify-content: center;
-    min-width: 0; /* Prevents flex item overflow */
+    justify-content: flex-end; /* Change from center to flex-end */
+    min-width: 0;
+    max-width: 400px; /* Add max-width constraint */
 }
 
 .hero-image img {
     max-width: 100%;
-    max-height: 400px; /* Added to control image height */
+    max-height: 350px; /* Reduced from 400px */
     width: auto;
     height: auto;
     border-radius: 10px;
     box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
-    object-fit: contain; /* Ensures proper image scaling */
+    object-fit: contain;
 }
 
-/* Responsive adjustments */
-@media (max-width: 768px) {
+@media (max-width: 992px) { /* Changed from 768px to 992px */
     .hero .container {
         flex-direction: column;
+        text-align: center;
     }
     
     .hero-image {
-        order: -1; /* Move image to top on mobile */
+        order: -1;
         margin-bottom: 2rem;
+        justify-content: center; /* Center image on mobile */
+        max-width: 100%; /* Full width on mobile */
     }
     
     .hero-image img {
-        max-height: 300px; /* Smaller image on mobile */
+        max-height: 280px; /* Smaller image on mobile */
     }
 }
 
