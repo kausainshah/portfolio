@@ -42,7 +42,133 @@
         </div>
     </section>
     
+    <section class="education-section">
+        <div class="education-container">
+            <div class="education-header">
+                <h2>Education Journey</h2>
+                <p>My academic milestones and achievements</p>
+            </div>
+            
+            <div class="education-track">
+                <!-- Bachelor's Degree -->
+                <div class="education-card">
+                    <div class="education-content">
+                        <span class="education-date">2015 - 2019</span>
+                        <h3 class="education-title">Bachelor of Science</h3>
+                        <h4 class="education-subtitle">Computer Science</h4>
+                        <p class="education-description">
+                            Graduated with honors from XYZ University. Specialized in Artificial Intelligence and Machine Learning.
+                        </p>
+                        <ul class="education-list">
+                            <li><i class="fas fa-check-circle"></i> GPA: 3.8/4.0</li>
+                            <li><i class="fas fa-check-circle"></i> Thesis on Neural Networks</li>
+                            <li><i class="fas fa-check-circle"></i> President of CS Club</li>
+                        </ul>
+                        <div class="education-icon">
+                            <i class="fas fa-graduation-cap"></i>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Master's Degree -->
+                <div class="education-card">
+                    <div class="education-content">
+                        <span class="education-date">2019 - 2021</span>
+                        <h3 class="education-title">Master of Science</h3>
+                        <h4 class="education-subtitle">Artificial Intelligence</h4>
+                        <p class="education-description">
+                            Advanced studies in Deep Learning and Computer Vision at ABC University. Research focused on GANs.
+                        </p>
+                        <ul class="education-list">
+                            <li><i class="fas fa-check-circle"></i> GPA: 3.9/4.0</li>
+                            <li><i class="fas fa-check-circle"></i> Published 2 research papers</li>
+                            <li><i class="fas fa-check-circle"></i> TA for ML courses</li>
+                        </ul>
+                        <div class="education-icon">
+                            <i class="fas fa-user-graduate"></i>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- PhD (if applicable) -->
+                <div class="education-card">
+                    <div class="education-content">
+                        <span class="education-date">2021 - Present</span>
+                        <h3 class="education-title">PhD Candidate</h3>
+                        <h4 class="education-subtitle">Machine Learning</h4>
+                        <p class="education-description">
+                            Current research on Transformer architectures and their applications in NLP at DEF University.
+                        </p>
+                        <ul class="education-list">
+                            <li><i class="fas fa-check-circle"></i> Research Assistant</li>
+                            <li><i class="fas fa-check-circle"></i> 3 conference papers</li>
+                            <li><i class="fas fa-check-circle"></i> Teaching Fellow</li>
+                        </ul>
+                        <div class="education-icon">
+                            <i class="fas fa-microscope"></i>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Certifications -->
+                <div class="education-card">
+                    <div class="education-content">
+                        <span class="education-date">2022</span>
+                        <h3 class="education-title">Advanced Certification</h3>
+                        <h4 class="education-subtitle">Deep Learning Specialization</h4>
+                        <p class="education-description">
+                            Completed advanced coursework in Neural Networks, CNN, RNN, and Transformers through Coursera.
+                        </p>
+                        <ul class="education-list">
+                            <li><i class="fas fa-check-circle"></i> DeepLearning.AI</li>
+                            <li><i class="fas fa-check-circle"></i> 5-course specialization</li>
+                            <li><i class="fas fa-check-circle"></i> Capstone project</li>
+                        </ul>
+                        <div class="education-icon">
+                            <i class="fas fa-certificate"></i>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="education-navigation">
+                <button class="education-nav-btn" onclick="scrollEducation(-300)">
+                    <i class="fas fa-chevron-left"></i>
+                </button>
+                <button class="education-nav-btn" onclick="scrollEducation(300)">
+                    <i class="fas fa-chevron-right"></i>
+                </button>
+            </div>
+        </div>
+    </section>
 
+    <script>
+        function scrollEducation(offset) {
+            const track = document.querySelector('.education-track');
+            track.scrollBy({
+                left: offset,
+                behavior: 'smooth'
+            });
+        }
+        
+        // Animation on scroll
+        document.addEventListener('DOMContentLoaded', () => {
+            const cards = document.querySelectorAll('.education-card');
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('animate');
+                    }
+                });
+            }, { threshold: 0.1 });
+            
+            cards.forEach(card => {
+                observer.observe(card);
+            });
+        });
+    </script>
+
+    
 <section id="projects" class="projects">
     <div class="container">
         <div class="section-header">
