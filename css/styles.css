@@ -91,12 +91,12 @@ nav {
 .hero-image {
     flex: 0 0 35%; /* Changed from flex:1 to control width */
     max-width: 350px; /* Reduced from 400px */
-    margin-left: 2rem; /* Pushes image right */
-    padding-left: 2rem; /* Additional right shift */
+    margin-left: 4rem; /* Pushes image right */
+    padding-left: 4rem; /* Additional right shift */
 }
 
 .hero-image img {
-    max-height: 320px; /* Reduced from 400px */
+    max-height: 300px; /* Reduced from 400px */
     width: 100%; /* Ensures image fills container */
     object-fit: cover; /* Better image fit */
     border-radius: 10px 0 0 10px; /* Rounded left side only */
