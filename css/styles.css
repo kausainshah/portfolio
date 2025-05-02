@@ -6,6 +6,7 @@
     --dark-color: #1f2937;
     --border-color: #e5e7eb;
     --hover-color: #dbeafe;
+    --white-color: #fffff;
 }
 
 * {
@@ -56,6 +57,12 @@ nav {
     font-size: 1.5rem;
     font-weight: 700;
     color: var(--primary-color);
+}
+
+.logo_footer {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: var(--white-color);
 }
 
 .nav-links {
